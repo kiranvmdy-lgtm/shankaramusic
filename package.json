@@ -2,7 +2,7 @@
   "name": "vite_react_shadcn_ts",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://kiranvmdy-lgtm.github.io/shankaramusic/",
+  "homepage": "https://www.shankaramusic.in",
   "type": "module",
   "scripts": {
     "dev": "vite",
