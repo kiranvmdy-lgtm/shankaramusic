@@ -6,6 +6,7 @@ import Instruments from "@/components/Instruments";
 import Gallery from "@/components/Gallery";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
+import WhatsAppCTA from "@/components/WhatsAppCTA";
 import { useEffect } from "react";
 
 const Index = () => {
@@ -37,6 +38,9 @@ const Index = () => {
         <Contact />
       </main>
       <Footer />
+
+      {/* WhatsApp CTA */}
+      <WhatsAppCTA />
     </div>
   );
 };
