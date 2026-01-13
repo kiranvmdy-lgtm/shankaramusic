@@ -31,7 +31,7 @@ const WhatsAppCTA = () => {
     }
     setSubmitting(true);
 
-    const number = "919035905406"; // WhatsApp number with country code (+91)
+    const number = "919945755812"; // WhatsApp number with country code (+91)
     const text = `Hi, I'm ${name}. I'm interested in ${course} course. My phone: ${phone}. Please contact me.`;
     const url = `https://wa.me/${number}?text=${encodeURIComponent(text)}`;
 
