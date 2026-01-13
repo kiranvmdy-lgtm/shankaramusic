@@ -135,7 +135,7 @@ const Contact = () => {
             {/* Google Map Embed */}
             <div className="rounded-2xl overflow-hidden h-80 border border-border">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.8876025478577!2d77.54396731482186!3d12.910694590893088!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3f0df6e1f9e7%3A0x5f7b0c0f0f0f0f0f!2sUttarahalli%2C%20Bengaluru%2C%20Karnataka!5e0!3m2!1sen!2sin!4v1234567890"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.9631402410064!2d77.55424437454568!3d12.910090616224963!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3f74752d1909%3A0xbaf1e174bc099732!2sShankara%20music%20school!5e0!3m2!1sen!2sin!4v1768311792631!5m2!1sen!2sin"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}

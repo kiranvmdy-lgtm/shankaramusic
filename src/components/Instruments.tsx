@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { X } from "lucide-react";
+import { Link } from "react-router-dom";
 import ukuleleImg from "../assets/ukulele.jpg";
 import bassImg from "../assets/bass.jpg";
 import twelveStringImg from "../assets/12string.jpg";
@@ -79,6 +80,12 @@ const Instruments = () => {
             Explore different types of guitars and stringed instruments. Click on any instrument 
             to learn more about its features and best use cases.
           </p>
+
+          <div className="mt-6 flex justify-center lg:justify-start">
+            <Link to="/guitar" className="bg-primary/10 text-primary px-5 py-2 rounded-full font-medium hover:bg-primary/20 transition-all">
+              Guitar Guide →
+            </Link>
+          </div>
         </div>
 
         {/* Instruments Grid */}

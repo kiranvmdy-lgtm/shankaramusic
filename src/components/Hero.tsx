@@ -94,7 +94,7 @@ const Hero = () => {
 
               {/* Name Badge */}
               <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 bg-card px-6 py-3 rounded-full shadow-soft border border-border">
-                <p className="font-display font-bold text-lg text-foreground">Devaraju</p>
+                <p className="font-display font-bold text-lg text-foreground">Devaraj G S</p>
                 <p className="text-primary text-sm text-center">Founder & Instructor</p>
               </div>
             </div>

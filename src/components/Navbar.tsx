@@ -1,14 +1,17 @@
 import { useState, useEffect } from "react";
-import { Menu, X, Music } from "lucide-react";
+import { Menu, X } from "lucide-react";
+import { Link } from "react-router-dom";
+import { NavLink as RouterNavLink } from "./NavLink";
 import logo from "@/assets/logo.jpg";
 
 const navLinks = [
-  { name: "Home", href: "#home" },
-  { name: "About", href: "#about" },
-  { name: "Classes", href: "#classes" },
-  { name: "Instruments", href: "#instruments" },
-  { name: "Gallery", href: "#gallery" },
-  { name: "Contact", href: "#contact" },
+  { name: "Home", href: "/" },
+  { name: "About", href: "/about" },
+  { name: "Classes", href: "/classes" },
+  { name: "Guitar", href: "/guitar" },
+  { name: "Instruments", href: "/instruments" },
+  { name: "Gallery", href: "/gallery" },
+  { name: "Contact", href: "/contact" },
 ];
 
 const Navbar = () => {
@@ -34,7 +37,7 @@ const Navbar = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <a href="#home" className="flex items-center gap-3 group">
+          <Link to="/" className="flex items-center gap-3 group">
             <img
               src={logo}
               alt="Shankara Music School Logo"
@@ -46,19 +49,30 @@ const Navbar = () => {
               </h1>
               <p className="text-xs text-muted-foreground">Since 2014</p>
             </div>
-          </a>
+          </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center gap-8">
-            {navLinks.map((link) => (
-              <a
-                key={link.name}
-                href={link.href}
-                className="text-foreground/80 hover:text-primary transition-colors duration-300 font-medium text-sm tracking-wide uppercase"
-              >
-                {link.name}
-              </a>
-            ))}
+            {navLinks.map((link) =>
+              link.href.startsWith("/") ? (
+                <RouterNavLink
+                  key={link.name}
+                  to={link.href}
+                  className="text-foreground/80 hover:text-primary transition-colors duration-300 font-medium text-sm tracking-wide uppercase"
+                  activeClassName="text-primary"
+                >
+                  {link.name}
+                </RouterNavLink>
+              ) : (
+                <a
+                  key={link.name}
+                  href={link.href}
+                  className="text-foreground/80 hover:text-primary transition-colors duration-300 font-medium text-sm tracking-wide uppercase"
+                >
+                  {link.name}
+                </a>
+              ),
+            )}
             <a
               href="#contact"
               className="bg-gradient-gold text-primary-foreground px-6 py-2.5 rounded-full font-semibold text-sm hover:shadow-gold transition-all duration-300 hover:scale-105"
@@ -81,16 +95,28 @@ const Navbar = () => {
         {isOpen && (
           <div className="lg:hidden absolute top-full left-0 right-0 bg-background/98 backdrop-blur-lg border-t border-border animate-slide-up">
             <div className="container py-6 flex flex-col gap-4">
-              {navLinks.map((link) => (
-                <a
-                  key={link.name}
-                  href={link.href}
-                  onClick={() => setIsOpen(false)}
-                  className="text-foreground/80 hover:text-primary transition-colors py-2 font-medium text-lg"
-                >
-                  {link.name}
-                </a>
-              ))}
+              {navLinks.map((link) =>
+                link.href.startsWith("/") ? (
+                  <RouterNavLink
+                    key={link.name}
+                    to={link.href}
+                    onClick={() => setIsOpen(false)}
+                    className="text-foreground/80 hover:text-primary transition-colors py-2 font-medium text-lg"
+                    activeClassName="text-primary"
+                  >
+                    {link.name}
+                  </RouterNavLink>
+                ) : (
+                  <a
+                    key={link.name}
+                    href={link.href}
+                    onClick={() => setIsOpen(false)}
+                    className="text-foreground/80 hover:text-primary transition-colors py-2 font-medium text-lg"
+                  >
+                    {link.name}
+                  </a>
+                ),
+              )}
               <a
                 href="#contact"
                 onClick={() => setIsOpen(false)}
