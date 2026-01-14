@@ -7,6 +7,7 @@ import logo from "@/assets/logo.jpg";
 const navLinks = [
   { name: "Home", href: "/" },
   { name: "About", href: "/about" },
+  { name: "Why Us", href: "/why-us" },
   { name: "Classes", href: "/classes" },
   { name: "Guitar", href: "/guitar" },
   { name: "Instruments", href: "/instruments" },
